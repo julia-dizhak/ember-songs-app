@@ -21,6 +21,8 @@ class Song {
 
 export default class BandsRoute extends Route {
   model() {
+
+    // songs
     const blackDog = new Song({
       title: 'Black Dog',
       band: 'Led Zeppelin',
@@ -33,6 +35,19 @@ export default class BandsRoute extends Route {
       rating: 2,
     });
 
+    const makeUp = new Song({
+        title: 'Make Up',
+        band: 'The Heart Kiss',
+        rating: 100000,
+    });
+
+    const prirva = new Song({
+        title: 'Prirva',
+        band: 'The Heart Kiss',
+        rating: 10000,
+    });
+
+    // bands
     const ledZeppelin = new Band({
       id: 'led-zeppelin',
       name: 'Led Zeppelin',
@@ -45,6 +60,13 @@ export default class BandsRoute extends Route {
       songs: [pretender],
     });
 
-    return [ledZeppelin, fooFighters];
+    const theHeartKiss = new Band({
+        id: 'the-heart-kiss',
+        name: 'The Heart Kiss',
+        songs: [makeUp, prirva],
+      });
+  
+
+    return [theHeartKiss, ledZeppelin, fooFighters];
   }
 }
