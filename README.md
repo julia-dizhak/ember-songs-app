@@ -7,10 +7,10 @@ A short introduction of this app could easily go here.
 
 You will need the following things properly installed on your computer.
 
-* [Git](https://git-scm.com/)
+* Git
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
+* Google Chrome
 
 ## Installation
 
@@ -21,8 +21,8 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember serve`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-* Visit your tests at [http://localhost:4200/tests](http://localhost:4200/tests).
+* Visit your app at [http://localhost:8080](http://localhost:8080).
+* Visit your tests at [http://localhost:8080/tests](http://localhost:8080/tests).
 
 ### Code Generators
 
