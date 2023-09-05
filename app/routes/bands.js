@@ -34,16 +34,21 @@ export default class BandsRoute extends Route {
       rating: 2,
     });
 
+    const pretender_1 = new Song({
+      title: 'The Pretender new',
+      band: 'Foo Fighters',
+    });
+
     const makeUp = new Song({
       title: 'Make Up',
       band: 'The Heart Kiss',
-      rating: 100000,
+      rating: 5,
     });
 
     const prirva = new Song({
       title: 'Prirva',
       band: 'The Heart Kiss',
-      rating: 10000,
+      rating: 5,
     });
 
     // bands
@@ -56,7 +61,7 @@ export default class BandsRoute extends Route {
     const fooFighters = new Band({
       id: 'foo-fighters',
       name: 'Foo Fighters',
-      songs: [pretender],
+      songs: [pretender, pretender_1],
     });
 
     const theHeartKiss = new Band({

@@ -5,9 +5,8 @@
     {{#each @model as |song|}}
       <li class="mb-2">
         {{song.title}}
-        <span class="float-right">{{song.rating}}</span>
-        <div>
-            <StarRating rating="5" />
+        <div class="float-right mt-4">
+          <StarRating @rating={{song.rating}} />
         </div>
       </li>
     {{/each}}
