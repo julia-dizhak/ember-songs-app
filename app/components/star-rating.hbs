@@ -1,5 +1,7 @@
-rating is
+rating of Song is
 {{#each this.stars as |star|}}
-  {{if star.full "X" "O"}}
-  {{!-- <FaIcon @icon="star" @prefix={{if star.full "fas" "far"}} /> --}}
+  <button type="button" {{on "click" (fn @onUpdate star.rating) }}>
+    {{if star.full "X" "O"}}
+    {{!-- <FaIcon @icon="star" @prefix={{if star.full "fas" "far"}} /> --}}
+  </button>
 {{/each}}
