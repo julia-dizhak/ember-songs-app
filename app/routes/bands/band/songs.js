@@ -10,4 +10,9 @@ export default class BandsBandSongsRoute extends Route {
   //   super.setupController(...arguments);
   //   controller.set('band', this.modelFor('bands.band'));
   // }
+
+  resetController(controller) {
+    controller.title = '';
+    controller.showAddSong = true;
+  }
 }
