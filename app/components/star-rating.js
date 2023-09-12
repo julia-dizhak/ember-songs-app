@@ -6,7 +6,7 @@ export default class StarRatingComponent extends Component {
   }
 
   get stars() {
-    // use const 
+    // use const
     let stars = [];
     // todo do not mutate state
     for (let i = 1; i <= this.maxRating; i++) {

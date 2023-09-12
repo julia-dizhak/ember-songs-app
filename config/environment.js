@@ -23,7 +23,7 @@ module.exports = function (environment) {
     fontawesome: {
       warnIfNoIconsIncluded: false,
       // ...
-    }
+    },
   };
 
   if (environment === 'development') {
