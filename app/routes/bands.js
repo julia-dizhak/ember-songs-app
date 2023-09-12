@@ -1,7 +1,8 @@
 import Route from '@ember/routing/route';
 import { tracked } from '@glimmer/tracking';
+import { inject as service } from '@ember/service';
 
-class Band {
+export class Band {
   @tracked name;
   @tracked songs;
 
@@ -21,6 +22,8 @@ export class Song {
 }
 
 export default class BandsRoute extends Route {
+  @service catalog;
+
   model() {
     // songs
     const blackDog = new Song({
@@ -71,6 +74,11 @@ export default class BandsRoute extends Route {
       songs: [makeUp, prirva],
     });
 
-    return [theHeartKiss, ledZeppelin, fooFighters];
+    this.catalog.add('band', theHeartKiss);
+    this.catalog.add('band', ledZeppelin);
+    this.catalog.add('band', fooFighters);
+
+
+    return this.catalog.bands;
   }
 }
