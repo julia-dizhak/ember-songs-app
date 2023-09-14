@@ -6,6 +6,7 @@ A short introduction of this app could easily go here.
 
 * Creating songs
 * Creating bands
+* Add service catalog and keep songs/bands under the storage
 
 ## Prerequisites
 

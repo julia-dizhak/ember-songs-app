@@ -10,15 +10,21 @@ export default class CatalogService extends Service {
     this.storage.songs = tracked([]);
   }
 
+  get bands() {
+    return this.storage.bands;
+  }
+
+  get songs() {
+    return this.storage.songs;
+  }
+
   add(type, record) {
     let collection = type === 'band' ? this.storage.bands : this.storage.songs;
     collection.push(record);
   }
 
-  get bands() {
-    return this.storage.bands;
-  }
-  get songs() {
-    return this.storage.songs;
+  find(type, filterFn) {
+    let collection = type === 'band' ? this.bands : this.songs; 
+    return collection.find(filterFn);
   }
 }
